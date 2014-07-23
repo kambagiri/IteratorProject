@@ -17,20 +17,10 @@ namespace IteratorProject
     {
         return new Enumerator1(MyList);
        
-       /* var NewList = new MyList().GetEnumerator();   // tried to implement in new way, couldn't succeed. So, used your iterator help 
-        while(NewList.MoveNext())
-        {
-            Console.WriteLine(NewList.GetEnumerator());
-        }*/
     }
 
     public IEnumerator<int> GetEnumerator(Func<int, bool> filter)
     {
-        /*var NewList = new MyList().Where(filter).GetEnumerator();   // tried to implement in new way, couldn't succeed. So, used your iterator help 
-         while(NewList.MoveNext())
-        {
-            Console.WriteLine(NewList.GetEnumerator());
-        */
         return new Enumerator1(filter, MyList);
     }
 
